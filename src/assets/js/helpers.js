@@ -105,10 +105,6 @@ export default {
 
 
     getIceServer(){
-        // "turns:eu-turn4.xirsys.com:5349?transport=tcp"
-        // "turns:eu-turn4.xirsys.com:443?transport=tcp"
-        // "turn:eu-turn4.xirsys.com:80?transport=tcp",
-        // "turn:eu-turn4.xirsys.com:3478?transport=udp",
         return {
             iceServers: [
                 {
@@ -158,11 +154,6 @@ export default {
 
         chatMsgDiv.appendChild(rowDiv);
 
-        /**
-         * Move focus to the newly added message but only if:
-         * 1. Page has focus
-         * 2. User has not moved scrollbar upward. This is to prevent moving the scroll position if user is reading previous messages.
-         */
         if(this.pageHasFocus){
             rowDiv.scrollIntoView();
         }
